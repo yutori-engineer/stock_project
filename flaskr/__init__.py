@@ -33,10 +33,6 @@ def create_app(test_config=None):
     def hello(name=None):
         return render_template('hello.html', name=name)
     
-    @app.route("/goodBy")
-    def goodBy():
-        return render_template('goodBy.html')
-    
     @app.route("/<string:name>")
     def helloName(name):
         return f"hello,{escape(name)}! <br> What do you like?"
