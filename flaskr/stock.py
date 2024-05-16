@@ -14,14 +14,13 @@ from werkzeug.security import generate_password_hash
 from jinja2 import TemplateNotFound
 from .db import get_db
 
-simple_page = Blueprint('simple_page', __name__,
-                        template_folder='templates')
+bp = Blueprint("stock", __name__)
 
-@simple_page.route('/practice', defaults={'page': 'index'})
+@bp.route("/stock/")
 # @simple_page.route('/practice/<page>')
-def show(page):
+def stock():
     try:
-        return render_template(f'practice.html')
+        return render_template(f'stock.html')
         # return render_template(f'pages/{page}.html')
     except TemplateNotFound:
         abort(404)

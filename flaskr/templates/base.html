@@ -21,4 +21,9 @@
     <div class="flash">{{ message }}</div>
   {% endfor %}
   {% block content %}{% endblock %}
+  <div id="footer">
+    {% block footer %}
+    &copy; Copyright 2024 by <a href="https://github.com/yutori-engineer">yutori-engineer</a>.
+    {% endblock %}
+</div>
 </section>

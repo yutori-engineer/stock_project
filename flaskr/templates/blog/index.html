@@ -2,7 +2,7 @@
 {% extends 'base.html' %}
 
 {% block header %}
-  <h1>{% block title %}メモ{% endblock %}</h1>
+  <h1>{% block title %}ブログ{% endblock %}</h1>
   {% if g.user %}
     <a class="action" href="{{ url_for('blog.create') }}">新規</a>
   {% endif %}
